@@ -20,7 +20,7 @@ const FormStyled = styled.form`
 		width: 220px;
 		opacity: 1;
 
-		@media (max-width: 500px) {
+		@media (max-width: 350px) {
 			width: 180px;
 		}
 	}

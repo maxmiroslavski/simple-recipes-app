@@ -33,13 +33,6 @@ const ListOfItems = (props: ListOfItemsProps) => {
 	}
 
 	return (
-		// <ListOfItemsStyled grid={gridSettings}>
-		// 	{!isLoading && (
-		// 		<h1>{listOfItems.length !== 0 ? title : 'No items found.'}</h1>
-		// 	)}
-		// 	<p>{description}</p>
-		// 	{!isLoading && <ul>{listOfItems}</ul>}
-		// </ListOfItemsStyled>
 		<Fragment>
 			<ListOfItemsStyled grid={gridSettings}>
 				<h1>{listOfItems.length !== 0 ? title : 'No items found.'}</h1>

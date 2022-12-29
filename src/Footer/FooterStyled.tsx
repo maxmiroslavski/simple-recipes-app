@@ -10,11 +10,19 @@ const FooterWrapperStyled = styled.div`
 	justify-content: space-between;
 	align-items: center;
 
+	@media (max-width: 420px) {
+		flex-direction: column;
+	}
+
 	.copyright {
 		font-size: 20px;
 		display: flex;
 		align-items: center;
 		padding-bottom: 2px;
+
+		@media (max-width: 420px) {
+			padding-top: 12px;
+		}
 	}
 `;
 

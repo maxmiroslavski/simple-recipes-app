@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 import { ResponsiveMenuStyled } from './ResponsiveMenuStyled';
 
-import { SubmenuContainer } from '../../Card/SubmenuContainer';
+import { DropDownMenu } from './DropDownMenu';
 
 const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 	const [onHomePage, setOnHomePage] = useState(false);
@@ -49,11 +51,70 @@ const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 		setOnFavorite(!onFavorite);
 	};
 
+	const cuisineData = [
+		{
+			title: 'Italian',
+			link: '/cuisine/italian',
+		},
+		{
+			title: 'American',
+			link: '/cuisine/american',
+		},
+		{
+			title: 'French',
+			link: '/cuisine/french',
+		},
+		{
+			title: 'Mexican',
+			link: '/cuisine/mexican',
+		},
+	];
+
+	const dietData = [
+		{
+			title: 'Vegan',
+			link: '/diet/vegetarian',
+		},
+		{
+			title: 'Gluten Free',
+			link: '/diet/glutenfree',
+		},
+		{
+			title: 'Keto',
+			link: '/diet/keto',
+		},
+	];
+
+	const mealData = [
+		{
+			title: 'Breakfast',
+			link: '/diet/vegetarian',
+		},
+		{
+			title: 'Lunch',
+			link: '/diet/vegetarian',
+		},
+		{
+			title: 'Dinner',
+			link: '/diet/vegetarian',
+		},
+		{
+			title: 'Drinks',
+			link: '/diet/vegetarian',
+		},
+	];
+
 	return (
 		<Fragment>
 			{iconSwitch && (
 				<ResponsiveMenuStyled>
-					<ul className="menu">
+					<motion.ul
+						key="list"
+						initial={{ x: -200 }}
+						animate={{ x: 0 }}
+						transition={{ duration: 0.4, type: 'spring' }}
+						className="menu"
+					>
 						<li>
 							<Link to="/" onClick={homePageClickHandler}>
 								Home
@@ -66,28 +127,7 @@ const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 							>
 								Cuisine
 							</span>
-							{showCuisine && (
-								<SubmenuContainer>
-									<li>
-										<Link to="/cuisine/italian">
-											Italian
-										</Link>
-									</li>
-									<li>
-										<Link to="/cuisine/american">
-											American
-										</Link>
-									</li>
-									<li>
-										<Link to="/cuisine/french">French</Link>
-									</li>
-									<li>
-										<Link to="/cuisine/mexican">
-											Mexican
-										</Link>
-									</li>
-								</SubmenuContainer>
-							)}
+							{showCuisine && <DropDownMenu data={cuisineData} />}
 						</li>
 						<li>
 							<span
@@ -96,21 +136,7 @@ const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 							>
 								Diet
 							</span>
-							{showDiet && (
-								<SubmenuContainer>
-									<li>
-										<Link to="/diet/vegetarian">Vegan</Link>
-									</li>
-									<li>
-										<Link to="/diet/glutenfree">
-											Gluten Free
-										</Link>
-									</li>
-									<li>
-										<Link to="/diet/keto">Keto</Link>
-									</li>
-								</SubmenuContainer>
-							)}
+							{showDiet && <DropDownMenu data={dietData} />}
 						</li>
 						<li>
 							<span
@@ -119,31 +145,14 @@ const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 							>
 								Meal
 							</span>
-							{showMeal && (
-								<SubmenuContainer>
-									<li>
-										<Link to="/meals/breakfast">
-											Breakfast
-										</Link>
-									</li>
-									<li>
-										<Link to="/meals/lunch">Lunch</Link>
-									</li>
-									<li>
-										<Link to="/meals/dessert">Dessert</Link>
-									</li>
-									<li>
-										<Link to="/meals/drinks">Drinks</Link>
-									</li>
-								</SubmenuContainer>
-							)}
+							{showMeal && <DropDownMenu data={mealData} />}
 						</li>
 						<li>
 							<Link onClick={favoriteClickHandler} to="/favorite">
 								Favorites
 							</Link>
 						</li>
-					</ul>
+					</motion.ul>
 				</ResponsiveMenuStyled>
 			)}
 		</Fragment>

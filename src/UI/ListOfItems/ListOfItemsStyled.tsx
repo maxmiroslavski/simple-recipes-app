@@ -37,6 +37,9 @@ const ListOfItemsStyled = styled.div.attrs((props: styledProps) => ({
 		gap: 40px;
 		list-style: none;
 		margin-top: 50px;
+		@media (max-width: 870px) {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
 	}
 `;
 

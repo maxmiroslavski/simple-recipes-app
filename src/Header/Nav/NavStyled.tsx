@@ -39,6 +39,7 @@ const NavStyled = styled.nav`
 		padding-top: 5px;
 		transform: translateY(-20px);
 		opacity: 0;
+		display: none;
 		position: absolute;
 		min-width: 150px;
 	}
@@ -65,6 +66,7 @@ const NavStyled = styled.nav`
 
 	.menu:hover .dropdown {
 		opacity: 1;
+		display: block;
 		transition: 0.5s;
 		transform: translateY(0px);
 		display: flex;
