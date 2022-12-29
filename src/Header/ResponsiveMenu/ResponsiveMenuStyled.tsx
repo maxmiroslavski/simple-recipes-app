@@ -9,6 +9,10 @@ const ResponsiveMenuStyled = styled.div`
 		align-items: flex-start;
 	}
 
+	li:hover {
+		cursor: pointer;
+	}
+
 	a {
 		text-decoration: none;
 		color: inherit;
