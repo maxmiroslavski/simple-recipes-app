@@ -7,7 +7,8 @@ const HeaderWrapperStyled = styled.div`
 	height: 85px;
 
 	@media (max-width: 1000px) {
-		height: 75px;
+		height: 65px;
+		padding-top: 10px;
 	}
 `;
 

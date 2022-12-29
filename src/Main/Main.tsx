@@ -40,6 +40,10 @@ const Main = () => {
 const MainStyled = styled.main`
 	padding-top: 120px;
 	min-height: 100vh;
+
+	@media (max-width: 1000px) {
+		padding-top: 0px;
+	}
 `;
 
 export { Main };

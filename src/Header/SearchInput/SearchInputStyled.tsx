@@ -19,6 +19,10 @@ const FormStyled = styled.form`
 		z-index: 1;
 		width: 220px;
 		opacity: 1;
+
+		@media (max-width: 500px) {
+			width: 180px;
+		}
 	}
 
 	svg:hover input {
