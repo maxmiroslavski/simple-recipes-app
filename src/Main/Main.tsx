@@ -21,14 +21,29 @@ const Main = () => {
 			<ContainerBounding>
 				<ScrollToTop />
 				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/recipe/:name" element={<RecipePage />} />
-					<Route path="/cuisine/*" element={<AllCuisines />} />
-					<Route path="/diet/*" element={<AllDiets />} />
-					<Route path="/meals/*" element={<AllMeals />} />
-					<Route path="/favorite/" element={<FavoriteRecipes />} />
+					<Route path="/simple-recipes-app/" element={<HomePage />} />
 					<Route
-						path="/searched/:search"
+						path="/simple-recipes-app/recipe/:name"
+						element={<RecipePage />}
+					/>
+					<Route
+						path="/simple-recipes-app/cuisine/*"
+						element={<AllCuisines />}
+					/>
+					<Route
+						path="/simple-recipes-app/diet/*"
+						element={<AllDiets />}
+					/>
+					<Route
+						path="/simple-recipes-app/meals/*"
+						element={<AllMeals />}
+					/>
+					<Route
+						path="/simple-recipes-app/favorite/"
+						element={<FavoriteRecipes />}
+					/>
+					<Route
+						path="/simple-recipes-app/searched/:search"
 						element={<SearchedRecipes />}
 					/>
 				</Routes>

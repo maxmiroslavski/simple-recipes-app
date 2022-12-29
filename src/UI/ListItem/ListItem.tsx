@@ -8,7 +8,7 @@ const ListItem = (props: ListItemProps) => {
 	const { title, image, id } = props.data;
 
 	return (
-		<LinkStyled to={'/recipe/' + id}>
+		<LinkStyled to={'/simple-recipes-app/recipe/' + id}>
 			<ListItemStyled>
 				<img src={image} alt="recipe" />
 				<h3>{title}</h3>

@@ -12,7 +12,7 @@ const SearchInput = (props: any) => {
 
 	const submitFormHandler = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		navigate('/searched/' + enteredValue);
+		navigate('/simple-recipes-app/searched/' + enteredValue);
 		setEnteredValue('');
 	};
 
