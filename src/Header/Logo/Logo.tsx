@@ -6,7 +6,7 @@ import { GiKnifeFork } from 'react-icons/gi';
 
 const Logo = () => {
 	return (
-		<LinkStyled to="/simple-recipes-app/">
+		<LinkStyled to="/">
 			<LogoStyled>
 				<div className="logo">
 					<GiKnifeFork /> Simple <br /> Recipes
