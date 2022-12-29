@@ -32,6 +32,9 @@ const RecipeInformationStyled = styled.div`
 		text-decoration-thickness: 2.5px;
 		text-decoration-color: #eee3cb;
 		text-underline-offset: 7px;
+		@media (max-width: 500px) {
+			font-size: 45px;
+		}
 	}
 
 	h2 {
@@ -42,10 +45,17 @@ const RecipeInformationStyled = styled.div`
 		text-decoration-thickness: 2.5px;
 		text-decoration-color: #eee3cb;
 		text-underline-offset: 4px;
+		@media (max-width: 500px) {
+			font-size: 35px;
+		}
 	}
 
 	.recipe_description {
-		width: 550px;
+		max-width: 550px;
+		font-size: 22px;
+		@media (max-width: 500px) {
+			font-size: 18px;
+		}
 	}
 
 	img {
@@ -56,17 +66,12 @@ const RecipeInformationStyled = styled.div`
 	}
 	p {
 		line-height: 30px;
-		font-size: 22px;
 		margin: 5px 0;
 	}
 
 	ul {
 		margin-left: 23px;
 		margin-bottom: 20px;
-	}
-
-	ul li {
-		font-size: 22px;
 	}
 `;
 
