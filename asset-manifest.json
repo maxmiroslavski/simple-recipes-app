@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/simple-recipes-app/static/css/main.e6087146.css",
-    "main.js": "/simple-recipes-app/static/js/main.192181c8.js",
+    "main.js": "/simple-recipes-app/static/js/main.2c4a95ca.js",
     "index.html": "/simple-recipes-app/index.html",
     "main.e6087146.css.map": "/simple-recipes-app/static/css/main.e6087146.css.map",
-    "main.192181c8.js.map": "/simple-recipes-app/static/js/main.192181c8.js.map"
+    "main.2c4a95ca.js.map": "/simple-recipes-app/static/js/main.2c4a95ca.js.map"
   },
   "entrypoints": [
     "static/css/main.e6087146.css",
-    "static/js/main.192181c8.js"
+    "static/js/main.2c4a95ca.js"
   ]
 }
