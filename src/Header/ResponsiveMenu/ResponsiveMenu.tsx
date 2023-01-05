@@ -88,19 +88,19 @@ const ResponsiveMenu = (props: { iconSwitch: boolean }) => {
 	const mealData = [
 		{
 			title: 'Breakfast',
-			link: '/diet/vegetarian',
+			link: '/meals/breakfast',
 		},
 		{
 			title: 'Lunch',
-			link: '/diet/vegetarian',
+			link: '/meals/lunch',
 		},
 		{
 			title: 'Dinner',
-			link: '/diet/vegetarian',
+			link: '/meals/dessert',
 		},
 		{
 			title: 'Drinks',
-			link: '/diet/vegetarian',
+			link: '/meals/drinks',
 		},
 	];
 
